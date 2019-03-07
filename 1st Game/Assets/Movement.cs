@@ -3,8 +3,8 @@
 public class Movement : MonoBehaviour
 {
     public Rigidbody rb;
-    public float ForwardForce = 1000f;
-    public float SidwardForce = 600f;
+    public float ForwardForce = 4000f;
+    public float SidwardForce = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +19,12 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-SidwardForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-SidwardForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Input.GetKey("d"))
         {
-            rb.AddForce(SidwardForce * Time.deltaTime, 0, 0);
+            rb.AddForce(SidwardForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
     }
