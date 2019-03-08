@@ -15,9 +15,16 @@ public class GameManager : MonoBehaviour
          }
 
     }
+    //5:04
+
+    public void LevelComplete()
+    {
+        Debug.Log("Level Won!");
+    }
 
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }
