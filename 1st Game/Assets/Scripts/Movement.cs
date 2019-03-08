@@ -27,6 +27,10 @@ public class Movement : MonoBehaviour
             rb.AddForce(SidwardForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
+        if (rb.position.y < 0f )
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
     }
 }
  
